@@ -1,0 +1,52 @@
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.open, .modal-button{
+    border: none;
+    background-color: #47a386;
+    color: white;
+    padding: 1.5rem;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.modal{
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    padding: 3rem 5rem;
+    width: 50rem;
+}
+.modal h1,
+.modal p,
+.modal-button{
+    margin-top: 1.7rem;
+}
+
+/* Dynamic Class(es) */
+.show{
+    opacity: 1;
+    pointer-events: auto;
+}
